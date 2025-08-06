@@ -1,10 +1,10 @@
 .flex-container {
   display: flex;
-  align-items: stretch;
+  height: 200px;
   background-color: #f1f1f1;
 }
 
-.flex-container>div {
+.flex-container > div {
   background-color: DodgerBlue;
   color: white;
   width: 100px;
