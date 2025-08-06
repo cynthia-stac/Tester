@@ -12,18 +12,22 @@
 <button id ="main"> Click me!</button>
 <link rel="stylesheet" href="style.css">
 
-<h1>Create a Flex Container</h1>
+<h1>The flex-shrink Property</h1>
+
+<p>Do not let the third flex item shrink as much as the other flex items:</p>
 
 <div class="flex-container">
-  <div style="flex-grow: 1">1</div>
-  <div style="flex-grow: 1">2</div>
-  <div style="flex-grow: 8">3</div>
+  <div>1</div>
+  <div>2</div>
+  <div style="flex-shrink: 0">3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
 </div>
-
-<p>A Flexible Layout must have a parent element with the <em>display</em> property set to <em>flex</em>.</p>
-
-<p>Direct child elements(s) of the flexible container automatically becomes flexible items.</p>
-
 
 <script src="./script.js"></script>
 </body>
