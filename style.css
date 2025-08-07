@@ -13,6 +13,7 @@
   background-color: #f1f1f1;
   padding: 10px;
   flex: 50%;
+  align-self: flex-end;
 }
 
 .flex-item-right {
