@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pull String to Light Bulb</title>
+  <style>
+    :root {
+      --bg: #222;
+      --light-on: yellow;
+      --light-off: #444;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+    }
+
+    .toggle-scene {
+      position: relative;
+      height: 50vmin;
+      overflow: visible;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .bulb {
+      width: 60px;
+      height: 60px;
+      background: var(--light-off);
+      border-radius: 50%;
+      box-shadow: 0 0 20px #000;
+      transition: background 0.3s, box-shadow 0.3s;
+      margin-bottom: 10px;
+    }
+
+    .string {
+      width: 4px;
+      height: 100px;
+      background: white;
+    }
+
+    .pull-area {
+      width: 30px;
+      height: 30px;
+      background: white;
+      border-radius: 50%;
+      cursor: grab;
+      margin-top: 5px;
+      position: relative;
+      z-index: 1;
+      transition: transform 0.2s;
+    }
+  </style>
+</head>
+<body>
+  <div class="toggle-scene">
+    <div class="bulb" id="bulb"></div>
+    <div class="string"></div>
+    <div class="pull-area" id="pullArea"></div>
+  </div>
+
+  <script>
+    const pullArea = document.getElementById('pullArea');
+    const bulb = document.getElementById('bulb');
+
+    let isDragging = false;
+    let startY = 0;
+
+    pullArea.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startY = e.clientY;
+      pullArea.style.cursor = 'grabbing';
+    });
+
+    document.addEventListener('mouseup', () => {
+      if (isDragging) {
+        isDragging = false;
+        pullArea.style.transform = 'translateY(0px)';
+        pullArea.style.cursor = 'grab';
+      }
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+
+      let diff = e.clientY - startY;
+      diff = Math.min(Math.max(diff, 0), 100); // Clamp between 0 and 100
+      pullArea.style.transform = `translateY(${diff}px)`;
+
+      if (diff > 50) {
+        bulb.style.background = 'var(--light-on)';
+        bulb.style.boxShadow = '0 0 60px yellow';
+      } else {
+        bulb.style.background = 'var(--light-off)';
+        bulb.style.boxShadow = '0 0 20px #000';
+      }
+    });
+  </script>
+</body>
+</html>
