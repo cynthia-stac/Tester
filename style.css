@@ -13,13 +13,17 @@
   background-color: #f1f1f1;
   padding: 10px;
   flex: 50%;
-  align-self: flex-end;
+  align-self: center;
+  @include flex(1 200px);
+  @include order(2);
 }
 
 .flex-item-right {
   background-color: dodgerblue;
   padding: 10px;
   flex: 50%;
+  @include flex(1 200px);
+  @include order(2);
 }
 
 /* Responsive layout - makes a one column-layout instead of two-column layout */
