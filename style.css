@@ -1,26 +1,48 @@
-.nav-list {
+:root {
+  --bg: #222;
+  --light-on: yellow;
+  --light-off: #444;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  margin: 0;
+}
+
+.toggle-scene {
+  overflow: visible;
+  height: 50vmin;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  gap: 1rem;
-  /* flex-wrap: wrap; */
-  gap: 1rem;
-  border: 5px solid firebrick;
+}
 
-  margin: 0;
-  padding: 0; 
-  list-style: none;
+.bulb {
+  width: 60px;
+  height: 60px;
+  background: var(--light-off);
+  border-radius: 50%;
+  margin-bottom: 10px;
+  box-shadow: 0 0 20px #000;
+  transition: background 0.3s, box-shadow 0.3s;
 }
-@media (min-width: 600px) {
-  .nav-list {
-    flex-direction: row;
-    /* justify-content: space-between;
-    align-items: center; */
-  }
-  
+
+.string {
+  width: 4px;
+  height: 100px;
+  background: white;
 }
-.nav-list :nth-child(5) {
-  background-color: rebeccapurple;
-  align-self: stretch;
+
+.pull-area {
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  cursor: grab;
+  margin-top: 5px;
 }
