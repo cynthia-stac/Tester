@@ -22,5 +22,5 @@
 }
 .nav-list :nth-child(5) {
   background-color: rebeccapurple;
-  align-self: flex-end;
+  align-self: stretch;
 }
