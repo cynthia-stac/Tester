@@ -1,5 +1,5 @@
 let name = "Cynthia";
-let age = 20;
+let age = 21;
 
 let person = {
   name: name,
