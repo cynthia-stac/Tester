@@ -1,9 +1,9 @@
-function getClothing(isCold) {
-  if (isCold) {
-    const freezing = 'Grab a jacket!';
-  } else {
-    const hot = 'It’s a shorts kind of day.';
-    console.log(hot);
-  }
-}
-console.log(getClothing(false))
+let name = "Cynthia";
+let age = 20;
+
+let person = {
+  name: name,
+  age: age
+};
+
+// console.log(person);
