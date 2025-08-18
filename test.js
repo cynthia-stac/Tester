@@ -1,5 +1,5 @@
 const digits = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-for (const index in digits) {
+for (const index of digits) {
   console.log(digits[index]);
 }
