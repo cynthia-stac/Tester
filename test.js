@@ -3,7 +3,7 @@ function getClothing(isCold) {
     var freezing = 'Grab a jacket!';
   } else {
     var hot = 'It’s a shorts kind of day.';
-    console.log(freezing);
+    console.log(hot);
   }
 }
-console.log(getClothing(false))
+console.log(getClothing(true))
