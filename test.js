@@ -44,3 +44,12 @@
 // const dessert = new IceCream();
 // dessert.addScoop();
 // console.log(scoops)
+
+function createGrid([width = 5, height = 5]) {
+  return `Generates a ${width} x ${height} grid`;
+}
+
+createGrid([]); 
+createGrid([2]); 
+createGrid([2, 3]); 
+createGrid([undefined, 3]);
