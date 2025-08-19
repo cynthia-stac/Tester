@@ -29,18 +29,18 @@
 // console.log(upperizedNames)
 
 // constructor
-function IceCream() {
-  this.scoops = 0;
-}
+// function IceCream() {
+//   this.scoops = 0;
+// }
 
-// adds scoop to ice cream
-IceCream.prototype.addScoop = function() {
-  setTimeout(function() {
-    this.scoops++;
-    console.log('scoop added!');
-  }, 500);
-};
+// // adds scoop to ice cream
+// IceCream.prototype.addScoop = function() {
+//   setTimeout(function() {
+//     this.scoops++;
+//     console.log('scoop added!');
+//   }, 500);
+// };
 
-const dessert = new IceCream();
-dessert.addScoop();
-console.log(scoops)
+// const dessert = new IceCream();
+// dessert.addScoop();
+// console.log(scoops)
