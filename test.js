@@ -43,3 +43,4 @@ IceCream.prototype.addScoop = function() {
 
 const dessert = new IceCream();
 dessert.addScoop();
+console.log(scoops)
