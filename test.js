@@ -45,7 +45,7 @@
 // dessert.addScoop();
 // console.log(scoops)
 
-function createGrid([width = 5, height = 5]) {
+function createGrid([width = 5, height = 5] = []) {
   return `Generates a ${width} x ${height} grid`;
 }
 
