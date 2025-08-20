@@ -45,12 +45,16 @@
 // dessert.addScoop();
 // console.log(scoops)
 
-function createGrid([width = 5, height = 5] = []) {
-  return `Generates a ${width} x ${height} grid`;
-}
+// function createGrid([width = 5, height = 5] = []) {
+//   return `Generates a ${width} x ${height} grid`;
+// }
 
 // console.log(createGrid([])); 
 // console.log(createGrid([2])); 
 // console.log(createGrid([2, 3])); 
 // console.log(createGrid([undefined, 3]));
-console.log(createGrid());
+// console.log(createGrid());
+
+function houseDescriptor([houseColor = 'green', shutterColors = ['red']]) {
+  return `I have a ${houseColor} house with ${shutterColors.join(' and ')} shutters`;
+}
