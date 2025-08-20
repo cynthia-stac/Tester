@@ -66,7 +66,7 @@ function createSundae({scoops = 1, toppings = ['Hot Fudge']}) {
   return `Your sundae has ${scoops} ${scoopText} with ${toppings.join(' and ')} toppings.`;
 }
 
-createSundae({});
-createSundae({scoops: 2});
-createSundae({scoops: 2, toppings: ['Sprinkles']});
-createSundae({toppings: ['Cookie Dough']}); 
+console.log(createSundae({}));
+console.log(createSundae({scoops: 2})) ;
+console.log(createSundae({scoops: 2, toppings: ['Sprinkles','Dwarf','Cheese']}));
+console.log(createSundae({toppings: ['Cookie Dough']})); 
