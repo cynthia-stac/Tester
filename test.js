@@ -55,8 +55,18 @@
 // console.log(createGrid([undefined, 3]));
 // console.log(createGrid());
 
-function houseDescriptor([houseColor = 'green', shutterColors = ['red']]) {
-  return `I have a ${houseColor} house with ${shutterColors.join(' and ')} shutters`;
+// function houseDescriptor([houseColor = 'green', shutterColors = ['red']]) {
+//   return `I have a ${houseColor} house with ${shutterColors.join(' and ')} shutters`;
+// }
+
+// console.log(houseDescriptor(['green']))
+
+function createSundae({scoops = 1, toppings = ['Hot Fudge']}) {
+  const scoopText = scoops === 1 ? 'scoop' : 'scoops';
+  return `Your sundae has ${scoops} ${scoopText} with ${toppings.join(' and ')} toppings.`;
 }
 
-console.log(houseDescriptor(['green']))
+createSundae({});
+createSundae({scoops: 2});
+createSundae({scoops: 2, toppings: ['Sprinkles']});
+createSundae({toppings: ['Cookie Dough']}); 
