@@ -78,13 +78,16 @@ class Dessert {
 }
 
 class IceCream extends Dessert {
-  constructor(flavor, calories, toppings = []) {
+  constructor(flavor="Vanilla", calories=250, toppings = []) {
     super(calories);
     this.flavor = flavor;
     this.toppings = toppings;
   }
   addTopping(topping) {
     this.toppings.push(topping);
+  }
+   listToppings() {
+    return this.toppings.join(", ");
   }
 }
 
@@ -102,3 +105,7 @@ const plain = new IceCream();
 console.log(plain.flavor);    // undefined (no default given)
 console.log(plain.calories);  // 250
 console.log(plain.toppings);  // []
+
+
+
+console.log(vanilla.listToppings());
