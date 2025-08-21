@@ -112,16 +112,19 @@
 
 
 
-class Plane {
-  constructor(numEngines) {
-    this.numEngines = numEngines;
-    this.enginesActive = false;
-  }
+// class Plane {
+//   constructor(numEngines) {
+//     this.numEngines = numEngines;
+//     this.enginesActive = false;
+//   }
 
-  startEngines() {
-    console.log('starting engines…');
-    this.enginesActive = true;
-  }
-}
+//   startEngines() {
+//     console.log('starting engines…');
+//     this.enginesActive = true;
+//   }
+// }
 
-console.log(Plane.prototype); 
+// console.log(Plane.prototype); 
+
+const sym1 = Symbol('apple');
+console.log(sym1);
