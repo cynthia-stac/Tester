@@ -129,10 +129,13 @@
 // const sym1 = Symbol('apple');
 // console.log(sym1);
 
-const bowl = {
-  [Symbol('apple')]: { color: 'red', weight: 136.078 },
-  [Symbol('banana')]: { color: 'yellow', weight: 183.15 },
-  [Symbol('orange')]: { color: 'orange', weight: 170.097 },
-  [Symbol('banana')]: { color: 'yellow', weight: 176.845 }
-};
-console.log(bowl);
+// const bowl = {
+//   [Symbol('apple')]: { color: 'red', weight: 136.078 },
+//   [Symbol('banana')]: { color: 'yellow', weight: 183.15 },
+//   [Symbol('orange')]: { color: 'orange', weight: 170.097 },
+//   [Symbol('banana')]: { color: 'yellow', weight: 176.845 }
+// };
+// console.log(bowl);
+
+const months = new Set(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']);
+console.log(months.size);
