@@ -124,4 +124,4 @@ class Plane {
   }
 }
 
-console.log(typeof Plane); 
+console.log(Plane.prototype); 
