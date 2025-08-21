@@ -87,3 +87,18 @@ class IceCream extends Dessert {
     this.toppings.push(topping);
   }
 }
+
+const choco = new IceCream({ flavor: "Chocolate", calories: 300, toppings: ["nuts"] });
+console.log(choco.flavor);    // "Chocolate"
+console.log(choco.calories);  // 300
+console.log(choco.toppings);  // ["nuts"]
+
+const vanilla = new IceCream({ flavor: "Vanilla" });
+console.log(vanilla.flavor);    // "Vanilla"
+console.log(vanilla.calories);  // 250 (default)
+console.log(vanilla.toppings);  // []
+
+const plain = new IceCream();
+console.log(plain.flavor);    // undefined (no default given)
+console.log(plain.calories);  // 250
+console.log(plain.toppings);  // []
