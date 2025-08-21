@@ -71,41 +71,57 @@
 // console.log(buildHouse({}))
 // console.log(buildHouse({floors: 3, color: 'yellow'}))
 
-class Dessert {
-  constructor(calories = 250) {
-    this.calories = calories;
+// class Dessert {
+//   constructor(calories = 250) {
+//     this.calories = calories;
+//   }
+// }
+
+// class IceCream extends Dessert {
+//   constructor(flavor="Vanilla", calories=250, toppings = []) {
+//     super(calories);
+//     this.flavor = flavor;
+//     this.toppings = toppings;
+//   }
+//   addTopping(topping) {
+//     this.toppings.push(topping);
+//   }
+//    listToppings() {
+//     return this.toppings.join(", ");
+//   }
+// }
+
+// const choco = new IceCream({ flavor: "Chocolate", calories: 300, toppings: ["nuts"] });
+// console.log(choco.flavor);    // "Chocolate"
+// console.log(choco.calories);  // 300
+// console.log(choco.toppings);  // ["nuts"]
+
+// const vanilla = new IceCream({ flavor: "Vanilla" });
+// console.log(vanilla.flavor);    // "Vanilla"
+// console.log(vanilla.calories);  // 250 (default)
+// console.log(vanilla.toppings);  // []
+
+// const plain = new IceCream();
+// console.log(plain.flavor);    // undefined (no default given)
+// console.log(plain.calories);  // 250
+// console.log(plain.toppings);  // []
+
+
+
+// console.log(vanilla.listToppings());
+
+
+
+class Plane {
+  constructor(numEngines) {
+    this.numEngines = numEngines;
+    this.enginesActive = false;
+  }
+
+  startEngines() {
+    console.log('starting engines…');
+    this.enginesActive = true;
   }
 }
 
-class IceCream extends Dessert {
-  constructor(flavor="Vanilla", calories=250, toppings = []) {
-    super(calories);
-    this.flavor = flavor;
-    this.toppings = toppings;
-  }
-  addTopping(topping) {
-    this.toppings.push(topping);
-  }
-   listToppings() {
-    return this.toppings.join(", ");
-  }
-}
-
-const choco = new IceCream({ flavor: "Chocolate", calories: 300, toppings: ["nuts"] });
-console.log(choco.flavor);    // "Chocolate"
-console.log(choco.calories);  // 300
-console.log(choco.toppings);  // ["nuts"]
-
-const vanilla = new IceCream({ flavor: "Vanilla" });
-console.log(vanilla.flavor);    // "Vanilla"
-console.log(vanilla.calories);  // 250 (default)
-console.log(vanilla.toppings);  // []
-
-const plain = new IceCream();
-console.log(plain.flavor);    // undefined (no default given)
-console.log(plain.calories);  // 250
-console.log(plain.toppings);  // []
-
-
-
-console.log(vanilla.listToppings());
+console.log(typeof Plane); 
