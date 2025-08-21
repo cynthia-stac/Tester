@@ -137,5 +137,10 @@
 // };
 // console.log(bowl);
 
-const months = new Set(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']);
-console.log(months.keys());
+// const months = new Set(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']);
+// console.log(months.keys());
+
+const arr = [1, 2, 2, 3];
+const unique = new Set(arr);
+
+console.log(unique)
