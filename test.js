@@ -61,13 +61,12 @@
 
 // console.log(houseDescriptor(['green']))
 
-function createSundae({scoops = 1, toppings = ['Hot Fudge']} = {}) {
-  const scoopText = scoops === 1 ? 'scoop' : 'scoops';
-  return `Your sundae has ${scoops} ${scoopText} with ${toppings.join(' and ')} toppings.`;
-}
+// function buildHouse({floors: 1, color: 'red', walls: 'brick'} = {}){
+    
+//     return `Your house has ${floors} floor(s) with ${color} ${walls} walls`
+// }
 
-console.log(createSundae({}));
-console.log(createSundae({scoops: 2})) ;
-console.log(createSundae({scoops: 2, toppings: ['Sprinkles','Dwarf','Cheese']}));
-console.log(createSundae({toppings: ['Cookie Dough']})); 
-console.log(createSundae())
+// /* tests */
+// console.log(buildHouse()); 
+// console.log(buildHouse({}))
+// console.log(buildHouse({floors: 3, color: 'yellow'}))
