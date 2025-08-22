@@ -146,6 +146,11 @@
 // const s=new Set ([...unique,...[4,5,6,6]])
 // console.log(s)
 
-const months = new Set(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']);
-const iterator = months.values();
-console.log(iterator.next());
+// const months = new Set(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']);
+// const iterator = months.values();
+// console.log(iterator.next());
+
+const colors = new Set(['red', 'orange', 'yellow', 'green', 'blue', 'violet', 'brown', 'black']);
+for (const color of colors) {
+  console.log(color);
+}
