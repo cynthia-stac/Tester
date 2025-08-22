@@ -186,5 +186,5 @@ employees.set('richard@udacity.com', {
 });
 
 
-console.log(employees.delete('julia@udacity.com'))
-console.log(employees);
+// console.log(employees.delete('julia@udacity.com'))
+console.log(employees.get('richard@udacity.com'));
