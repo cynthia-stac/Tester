@@ -158,9 +158,11 @@
 
 let person = {name: "John"};
 
-const weak = new WeakSet();
+const weak = new Set();
 weak.add(person);
 
 console.log(weak.has(person)); // true
 
 person = null;
+console.log(person)
+console.log(weak)
