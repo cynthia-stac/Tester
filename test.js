@@ -185,4 +185,6 @@ employees.set('richard@udacity.com', {
     role: 'Content Developer'
 });
 
+
+console.log(employees.delete('julia@udacity.com'))
 console.log(employees);
