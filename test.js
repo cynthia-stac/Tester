@@ -150,7 +150,17 @@
 // const iterator = months.values();
 // console.log(iterator.next());
 
-const colors = new Set(['red', 'orange', 'yellow', 'green', 'blue', 'violet', 'brown', 'black']);
-for (const color of colors) {
-  console.log(color);
-}
+// const colors = new Set(['red', 'orange', 'yellow', 'green', 'blue', 'violet', 'brown', 'black']);
+// for (const color of colors) {
+//   console.log(color);
+// }
+
+
+let person = {name: "John"};
+
+const weak = new WeakSet();
+weak.add(person);
+
+console.log(weak.has(person)); // true
+
+person = null;
