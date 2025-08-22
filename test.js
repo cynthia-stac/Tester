@@ -143,4 +143,5 @@
 const arr = [1, 2, 2, 3];
 const unique = new Set(arr);
 
-console.log(unique)
+const s=new Set ([...unique,...[4,5,6,6]])
+console.log(s)
