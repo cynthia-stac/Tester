@@ -137,11 +137,15 @@
 // };
 // console.log(bowl);
 
-// const months = new Set(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']);
-// console.log(months.keys());
 
-const arr = [1, 2, 2, 3];
-const unique = new Set(arr);
 
-const s=new Set ([...unique,...[4,5,6,6]])
-console.log(s)
+
+// const arr = [1, 2, 2, 3];
+// const unique = new Set(arr);
+
+// const s=new Set ([...unique,...[4,5,6,6]])
+// console.log(s)
+
+const months = new Set(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']);
+const iterator = months.values();
+console.log(iterator.next());
