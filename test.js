@@ -185,6 +185,6 @@ employees.set('richard@udacity.com', {
     role: 'Content Developer'
 });
 
-for (const key of employees.keys()){
-    console.log(key)
+for (const value of employees.values()){
+    console.log(value)
 }
