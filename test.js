@@ -185,6 +185,6 @@ employees.set('richard@udacity.com', {
     role: 'Content Developer'
 });
 
-
-// console.log(employees.delete('julia@udacity.com'))
-console.log(employees.get('julia@udacity.com'));
+for (const key of employees.keys()){
+    console.log(key)
+}
