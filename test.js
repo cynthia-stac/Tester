@@ -185,6 +185,7 @@ employees.set('richard@udacity.com', {
     role: 'Content Developer'
 });
 
-for (const value of employees.values()){
-    console.log(value)
-}
+let iteratorObjForKeys = employees.keys()
+console.log(iteratorObjForKeys.next())
+console.log(iteratorObjForKeys.next())
+console.log(iteratorObjForKeys.next())
