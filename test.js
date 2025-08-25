@@ -199,5 +199,5 @@ const library = new WeakMap();
 library.set(book1, true);
 library.set(book2, false);
 library.set(book3, true);
-
-console.log([...library]);
+book1 = null
+console.log(library);
