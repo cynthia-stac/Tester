@@ -210,7 +210,7 @@ function talk(lang, isPolite){
         return `Ciao bella, sono ${this.name}`
     }
    }
-   if (isPolite)  {
+   if (!isPolite)  {
         if (lang === 'en'){
         return `${this.name}, what you want?`
         } else if (lang === 'it'){
@@ -222,4 +222,8 @@ const me = {
     name: 'Sina'
 }
 
-console.log(talk.call(me, 'it'))
+console.log(talk.call(me, 'it', true))
+console.log(talk.call(me, 'en', true))
+console.log(talk.call(me, 'it', false))
+console.log(talk.call(me, 'en', false))
+console.log(talk.apply(me, ['en', true]))
