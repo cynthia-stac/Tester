@@ -190,14 +190,14 @@
 // console.log(iteratorObjForValues.next())
 // console.log(iteratorObjForValues.next())
 
-let book1 = { title: 'Pride and Prejudice', author: 'Jane Austen' };
-let book2 = { title: 'The Catcher in the Rye', author: 'J.D. Salinger' };
-let book3 = { title: 'Gulliver’s Travels', author: 'Jonathan Swift' };
+// let book1 = { title: 'Pride and Prejudice', author: 'Jane Austen' };
+// let book2 = { title: 'The Catcher in the Rye', author: 'J.D. Salinger' };
+// let book3 = { title: 'Gulliver’s Travels', author: 'Jonathan Swift' };
 
-const library = new WeakMap();
+// const library = new WeakMap();
 
-library.set(book1, true);
-library.set(book2, false);
-library.set(book3, true);
-book1 = null
-console.log(library);
+// library.set(book1, true);
+// library.set(book2, false);
+// library.set(book3, true);
+// book1 = null
+// console.log(library);
