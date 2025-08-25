@@ -210,3 +210,4 @@ const me = {
     talk
 }
 console.log(me.talk())
+console.log(talk())
