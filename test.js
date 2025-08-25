@@ -202,15 +202,16 @@
 // book1 = null
 // console.log(library);
 
-function talk(){
-    return `I am ${this.name}`
+function talk(lang){
+    if (lang === 'en'){
+        return `I am ${this.name}`
+    } else if (lang === 'it'){
+        return `Io sono ${this.name}`
+    }
+      
 }
 const me = {
     name: 'Sina'
 }
 
-const meTalk = talk.bind(me)
-
-console.log(meTalk())
-console.log(talk.bind(me))
-console.log(talk.call(me))
+console.log(talk.call(me, 'it'))
