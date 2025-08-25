@@ -202,13 +202,21 @@
 // book1 = null
 // console.log(library);
 
-function talk(lang){
+function talk(lang, isPolite){
+    if (isPolite){
     if (lang === 'en'){
-        return `I am ${this.name}`
+        return `Hello, I am ${this.name}`
     } else if (lang === 'it'){
-        return `Io sono ${this.name}`
+        return `Ciao bella, sono ${this.name}`
     }
-      
+   }
+   if (isPolite)  {
+        if (lang === 'en'){
+        return `${this.name}, what you want?`
+        } else if (lang === 'it'){
+        return `Sono ${this.name}`
+    }
+   } 
 }
 const me = {
     name: 'Sina'
