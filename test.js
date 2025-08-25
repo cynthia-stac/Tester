@@ -203,11 +203,20 @@
 // console.log(library);
 
 function talk(){
-    return this
+    return `I am ${this.name}`
 }
 const me = {
-    name: 'Sina',
-    talk
+    name: 'Sina'
 }
-console.log(me.talk())
-console.log(talk())
+
+const meTalk = talk.bind(me)
+
+console.log(meTalk())
+
+
+// const you = {
+//     name: 'Qoli',
+//     talk
+// }
+console.log(talk.bind(me))
+// console.log(you.talk())
