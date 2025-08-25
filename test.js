@@ -201,3 +201,12 @@
 // library.set(book3, true);
 // book1 = null
 // console.log(library);
+
+function talk(){
+    return this
+}
+const me = {
+    name: 'Sina',
+    talk
+}
+console.log(me.talk())
