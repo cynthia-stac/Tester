@@ -167,25 +167,37 @@
 // console.log(person)
 // console.log(weak)
 
-const employees = new Map();
+// const employees = new Map();
 
-employees.set('james.parkes@udacity.com', { 
-    firstName: 'James',
-    lastName: 'Parkes',
-    role: 'Content Developer' 
-});
-employees.set('julia@udacity.com', {
-    firstName: 'Julia',
-    lastName: 'Van Cleve',
-    role: 'Content Developer'
-});
-employees.set('richard@udacity.com', {
-    firstName: 'Richard',
-    lastName: 'Kalehoff',
-    role: 'Content Developer'
-});
+// employees.set('james.parkes@udacity.com', { 
+//     firstName: 'James',
+//     lastName: 'Parkes',
+//     role: 'Content Developer' 
+// });
+// employees.set('julia@udacity.com', {
+//     firstName: 'Julia',
+//     lastName: 'Van Cleve',
+//     role: 'Content Developer'
+// });
+// employees.set('richard@udacity.com', {
+//     firstName: 'Richard',
+//     lastName: 'Kalehoff',
+//     role: 'Content Developer'
+// });
 
-let iteratorObjForValues = employees.values()
-console.log(iteratorObjForValues.next())
-console.log(iteratorObjForValues.next())
-console.log(iteratorObjForValues.next())
+// let iteratorObjForValues = employees.values()
+// console.log(iteratorObjForValues.next())
+// console.log(iteratorObjForValues.next())
+// console.log(iteratorObjForValues.next())
+
+let book1 = { title: 'Pride and Prejudice', author: 'Jane Austen' };
+let book2 = { title: 'The Catcher in the Rye', author: 'J.D. Salinger' };
+let book3 = { title: 'Gulliver’s Travels', author: 'Jonathan Swift' };
+
+const library = new WeakMap();
+
+library.set(book1, true);
+library.set(book2, false);
+library.set(book3, true);
+
+console.log([...library]);
