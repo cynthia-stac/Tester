@@ -212,11 +212,5 @@ const me = {
 const meTalk = talk.bind(me)
 
 console.log(meTalk())
-
-
-// const you = {
-//     name: 'Qoli',
-//     talk
-// }
 console.log(talk.bind(me))
-// console.log(you.talk())
+console.log(talk.call(me))
