@@ -291,6 +291,7 @@ const proxy = new Proxy(person, {
   }
 });
 
-console.log(proxy.name);     // "Getting name" → "Cynthia"
-proxy.age = 21;              // "Setting age to 21"
+console.log(proxy.age);     // "Getting name" → "Cynthia"
+proxy.name = 21;              // "Setting age to 21"
+console.log(proxy.name)
 
