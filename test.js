@@ -254,10 +254,25 @@
 
 // console.log(myPromiseObj)
 
-const delayedMessage = new Promise((resolve) => {
-  setTimeout(() => {
-    resolve("Hello after 1 seconds!");
-  }, 1000);
+// const delayedMessage = new Promise((resolve) => {
+//   setTimeout(() => {
+//     resolve("Hello after 1 seconds!");
+//   }, 1000);
+// });
+
+// delayedMessage.then(msg => console.log(msg));
+
+const user = { name: "Cynthia", age: 21 };
+
+const proxyUser = new Proxy(user, {
+  get(target, prop) {
+    if (prop === "age") {
+      return target[prop] + " years old"; // customize age output
+    }
+    return target[prop];
+  }
 });
 
-delayedMessage.then(msg => console.log(msg));
+console.log(proxyUser.name);
+console.log(proxyUser.age);  
+
