@@ -277,7 +277,12 @@
 // proxyPerson.age = 25;   // works
 // proxyPerson.age = "hi"; // throws error
 
-var richard = {status: 'Looking for work!'};
-var agent = new Proxy(richard, {});
-
-console.log(agent.status)
+const richard = {status: 'looking for work'};
+const handler = {
+    get(target, propName) {
+        console.log(target); // the `richard` object, not `handler` and not `agent`
+        console.log(propName); // the name of the property the proxy (`agent` in this case) is checking
+    }
+};
+const agent = new Proxy(richard, handler);
+agent.status;
