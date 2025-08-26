@@ -202,28 +202,50 @@
 // book1 = null
 // console.log(library);
 
-function talk(lang, isPolite){
-    if (isPolite){
-    if (lang === 'en'){
-        return `Hello, I am ${this.name}`
-    } else if (lang === 'it'){
-        return `Ciao bella, sono ${this.name}`
-    }
-   }
-   if (!isPolite)  {
-        if (lang === 'en'){
-        return `${this.name}, what you want?`
-        } else if (lang === 'it'){
-        return `Sono ${this.name}`
-    }
-   } 
-}
-const me = {
-    name: 'Sina'
-}
+// function talk(lang, isPolite){
+//     if (isPolite){
+//     if (lang === 'en'){
+//         return `Hello, I am ${this.name}`
+//     } else if (lang === 'it'){
+//         return `Ciao bella, sono ${this.name}`
+//     }
+//    }
+//    if (!isPolite)  {
+//         if (lang === 'en'){
+//         return `${this.name}, what you want?`
+//         } else if (lang === 'it'){
+//         return `Sono ${this.name}`
+//     }
+//    } 
+// }
+// const me = {
+//     name: 'Sina'
+// }
 
-console.log(talk.call(me, 'it', true))
-console.log(talk.call(me, 'en', true))
-console.log(talk.call(me, 'it', false))
-console.log(talk.call(me, 'en', false))
-console.log(talk.apply(me, ['en', true]))
+// console.log(talk.call(me, 'it', true))
+// console.log(talk.call(me, 'en', true))
+// console.log(talk.call(me, 'it', false))
+// console.log(talk.call(me, 'en', false))
+// console.log(talk.apply(me, ['en', true]))
+
+// function Person(n) {
+//     this.name = n
+//     this.talk = function(){
+//             console.log(this)
+//     }
+//     setTimeout(() => {
+//         console.log(this)
+//     }, 100)
+// }
+// const me = new Person('Sina')
+// // console.log(me.talk())
+
+new Promise(function () {
+    window.setTimeout(function createSundae(flavor = 'chocolate') {
+        const sundae = {};
+        // request ice cream
+        // get cone
+        // warm up ice cream scoop
+        // scoop generous portion into cone!
+    }, Math.random() * 2000);
+});
