@@ -242,6 +242,22 @@
 
 // 
 
-const myPromiseObj = new Promise(function (resolve, reject) {
-    // sundae creation code
+// const myPromiseObj = new Promise(function (resolve, reject) {
+  
+// myPromiseObj.then(function(sundae) {
+//     console.log(`Time to eat my delicious ${sundae}`);
+// }, function(msg) {
+//     console.log(msg);
+//     self.goCry(); // not a real method
+// });
+// });
+
+// console.log(myPromiseObj)
+
+const delayedMessage = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve("Hello after 1 seconds!");
+  }, 1000);
 });
+
+delayedMessage.then(msg => console.log(msg));
