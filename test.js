@@ -277,7 +277,7 @@
 // proxyPerson.age = 25;   // works
 // proxyPerson.age = "hi"; // throws error
 
-var richard = {status: 'looking for work'};
+var richard = {status: 'Looking for work!'};
 var agent = new Proxy(richard, {});
 
-agent.status;
+console.log(agent.status)
