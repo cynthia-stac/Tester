@@ -277,12 +277,20 @@
 // proxyPerson.age = 25;   // works
 // proxyPerson.age = "hi"; // throws error
 
-const richard = {status: 'looking for work'};
-const handler = {
-    get(target, propName) {
-        console.log(target); // the `richard` object, not `handler` and not `agent`
-        console.log(propName); // the name of the property the proxy (`agent` in this case) is checking
-    }
-};
-const agent = new Proxy(richard, handler);
-console.log(agent.status)
+const person = { name: "Cynthia", age: 20 };
+
+const proxy = new Proxy(person, {
+  get(target, property) {
+    console.log(`Getting ${property}`);
+    return target[property];
+  },
+  set(target, property, value) {
+    console.log(`Setting ${property} to ${value}`);
+    target[property] = value;
+    return true; // must return true for success
+  }
+});
+
+console.log(proxy.name);     // "Getting name" → "Cynthia"
+proxy.age = 21;              // "Setting age to 21"
+
