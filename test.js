@@ -285,4 +285,4 @@ const handler = {
     }
 };
 const agent = new Proxy(richard, handler);
-agent.status;
+console.log(agent.status)
