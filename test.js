@@ -262,17 +262,22 @@
 
 // delayedMessage.then(msg => console.log(msg));
 
-const user = { name: "Cynthia", age: 21 };
+// const person = {};
 
-const proxyUser = new Proxy(user, {
-  get(target, prop) {
-    if (prop === "age") {
-      return target[prop] + " years old"; // customize age output
-    }
-    return target[prop];
-  }
-});
+// const proxyPerson = new Proxy(person, {
+//   set(target, prop, value) {
+//     if (prop === "age" && typeof value !== "number") {
+//       throw new TypeError("Age must be a number!");
+//     }
+//     target[prop] = value;
+//     return true;
+//   }
+// });
 
-console.log(proxyUser.name);
-console.log(proxyUser.age);  
+// proxyPerson.age = 25;   // works
+// proxyPerson.age = "hi"; // throws error
 
+var richard = {status: 'looking for work'};
+var agent = new Proxy(richard, {});
+
+agent.status;
