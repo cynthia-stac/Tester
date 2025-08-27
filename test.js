@@ -298,17 +298,17 @@
 // console.log(proxy.name);     // "Getting name" → "Umubyeyi"
 // console.log(proxy.age)       //"Getting age" → "21"
 
-const richard = {status: 'looking for work'};
-const handler = {
-    set(target, propName, value) {
-        if (propName === 'payRate') { // if the pay is being set, take 15% as commission
-            value = value * 0.85;
-        }
-        target[propName] = value;
-    }
-};
-const agent = new Proxy(richard, handler);
-agent.payRate = 1000; // set the actor's pay to $1,000
-console.log(agent.payRate); // $850 the actor's actual pay
+// const richard = {status: 'looking for work'};
+// const handler = {
+//     set(target, propName, value) {
+//         if (propName === 'payRate') { // if the pay is being set, take 15% as commission
+//             value = value * 0.85;
+//         }
+//         target[propName] = value;
+//     }
+// };
+// const agent = new Proxy(richard, handler);
+// agent.payRate = 1000; // set the actor's pay to $1,000
+// console.log(agent.payRate); // $850 the actor's actual pay
 
 
