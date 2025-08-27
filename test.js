@@ -311,4 +311,28 @@
 // agent.payRate = 1000; // set the actor's pay to $1,000
 // console.log(agent.payRate); // $850 the actor's actual pay
 
+// function* numbers() {
+//   yield 1;
+//   yield 2;
+//   yield 3;
+// }
+
+// const gen = numbers();
+
+// console.log(gen.next()); // { value: 1, done: false }
+// console.log(gen.next()); // { value: 2, done: false }
+// console.log(gen.next()); // { value: 3, done: false }
+// console.log(gen.next()); // { value: undefined, done: true }
+// console.log(gen.next()); // { value: undefined, done: true }
+
+function* conversation() {
+  const name = yield "What’s your name?";
+  yield `Hello, ${name}!`;
+}
+
+const chat = conversation();
+console.log(chat.next().value);     // "What’s your name?"
+console.log(chat.next().value); // "Hello, Cynthia!"
+
+
 
