@@ -325,14 +325,26 @@
 // console.log(gen.next()); // { value: undefined, done: true }
 // console.log(gen.next()); // { value: undefined, done: true }
 
-function* conversation() {
-  const name = yield "What’s your name?";
-  yield `Hello, ${name}!`;
+// function* conversation() {
+//   const name = yield "What’s your name?";
+//   yield `Hello, ${name}!`;
+// }
+
+// const chat = conversation();
+// console.log(chat.next().value);     // "What’s your name?"
+// console.log(chat.next("Cynthia").value); // "Hello, Cynthia!"
+
+function* colors() {
+  yield "red";
+  yield "green";
+  yield "blue";
 }
 
-const chat = conversation();
-console.log(chat.next().value);     // "What’s your name?"
-console.log(chat.next("Cynthia").value); // "Hello, Cynthia!"
+for (const color of colors()) {
+  console.log(color);
+}
+// red, green, blue
+
 
 
 
