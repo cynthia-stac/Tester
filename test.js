@@ -420,5 +420,5 @@ if (!Array.prototype.includes) {
   };
 }
 
-
+console.log(Array)
 
