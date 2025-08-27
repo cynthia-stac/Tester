@@ -332,7 +332,7 @@ function* conversation() {
 
 const chat = conversation();
 console.log(chat.next().value);     // "What’s your name?"
-console.log(chat.next().value); // "Hello, Cynthia!"
+console.log(chat.next("Cynthia").value); // "Hello, Cynthia!"
 
 
 
