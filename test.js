@@ -414,5 +414,11 @@
 // // displays each name with description on its own line
 // console.log(positions.join('\n')); 
 
+if (!Array.prototype.includes) {
+  Array.prototype.includes = function(value) {
+    return this.indexOf(value) !== -1;
+  };
+}
+
 
 
