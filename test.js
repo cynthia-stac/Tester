@@ -345,25 +345,36 @@
 // }
 // red, green, blue
 
-function* smallNumbers() {
-  yield 1;
-  yield 2;
+// function* smallNumbers() {
+//   yield 1;
+//   yield 2;
+// }
+
+// function* bigNumbers() {
+//   yield 100;
+//   yield 200;
+// }
+
+// function* allNumbers() {
+//   yield* smallNumbers(); // delegate
+//   yield* bigNumbers();
+// }
+
+// for (const num of allNumbers()) {
+//   console.log(num);
+// }
+// // 1, 2, 100, 200
+
+function* displayResponse() {
+    const response = yield;
+    console.log(`Your response is "${response}"!`);
 }
 
-function* bigNumbers() {
-  yield 100;
-  yield 200;
-}
+const iterator = displayResponse();
 
-function* allNumbers() {
-  yield* smallNumbers(); // delegate
-  yield* bigNumbers();
-}
-
-for (const num of allNumbers()) {
-  console.log(num);
-}
-// 1, 2, 100, 200
+iterator.next();  // starts running the generator function
+iterator.next('Hello Udacity Student'); // send data into the generator
+// the line
 
 
 
