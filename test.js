@@ -334,16 +334,37 @@
 // console.log(chat.next().value);     // "What’s your name?"
 // console.log(chat.next("Cynthia").value); // "Hello, Cynthia!"
 
-function* colors() {
-  yield "red";
-  yield "green";
-  yield "blue";
+// function* colors() {
+//   yield "red";
+//   yield "green";
+//   yield "blue";
+// }
+
+// for (const color of colors()) {
+//   console.log(color);
+// }
+// red, green, blue
+
+function* smallNumbers() {
+  yield 1;
+  yield 2;
 }
 
-for (const color of colors()) {
-  console.log(color);
+function* bigNumbers() {
+  yield 100;
+  yield 200;
 }
-// red, green, blue
+
+function* allNumbers() {
+  yield* smallNumbers(); // delegate
+  yield* bigNumbers();
+}
+
+for (const num of allNumbers()) {
+  console.log(num);
+}
+// 1, 2, 100, 200
+
 
 
 
