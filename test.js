@@ -189,7 +189,7 @@
 // console.log(iteratorObjForValues.next())
 // console.log(iteratorObjForValues.next())
 // console.log(iteratorObjForValues.next())
-
+// console.log(employees)
 // let book1 = { title: 'Pride and Prejudice', author: 'Jane Austen' };
 // let book2 = { title: 'The Catcher in the Rye', author: 'J.D. Salinger' };
 // let book3 = { title: 'Gulliver’s Travels', author: 'Jonathan Swift' };
@@ -413,8 +413,6 @@ const positions = generatorIterator.next(`${name} is magnificent!`).value;
 
 // displays each name with description on its own line
 console.log(positions.join('\n')); 
-
-
 
 
 
