@@ -277,25 +277,38 @@
 // proxyPerson.age = 25;   // works
 // proxyPerson.age = "hi"; // throws error
 
-const person = { name: "Cynthia", age: 20 };
+// const person = { name: "Cynthia", age: 20 };
 
-const proxy = new Proxy(person, {
-  get(target, property) {
-    console.log(`Getting ${property}`);
-    return target[property];
-  },
-  set(target, property, value) {
-    console.log(`Setting ${property} to ${value}`);
-    target[property] = value;
-    return true; // must return true for success
-  }
-});
+// const proxy = new Proxy(person, {
+//   get(target, property) {
+//     console.log(`Getting ${property}`);
+//     return target[property];
+//   },
+//   set(target, property, value) {
+//     console.log(`Setting ${property} to ${value}`);
+//     target[property] = value;
+//     return true; // must return true for success
+//   }
+// });
 
-console.log(proxy.name);     // "Getting name" → "Cynthia"
-console.log(proxy.age)       //"Getting age" → "21"  
-proxy.name = 'Umubyeyi '       //"Setting name to Umubyeyi"
-proxy.age = 21;              // "Setting age to 21"
-console.log(proxy.name);     // "Getting name" → "Umubyeyi"
-console.log(proxy.age)       //"Getting age" → "21"
+// console.log(proxy.name);     // "Getting name" → "Cynthia"
+// console.log(proxy.age)       //"Getting age" → "21"  
+// proxy.name = 'Umubyeyi '       //"Setting name to Umubyeyi"
+// proxy.age = 21;              // "Setting age to 21"
+// console.log(proxy.name);     // "Getting name" → "Umubyeyi"
+// console.log(proxy.age)       //"Getting age" → "21"
+
+const richard = {status: 'looking for work'};
+const handler = {
+    set(target, propName, value) {
+        if (propName === 'payRate') { // if the pay is being set, take 15% as commission
+            value = value * 0.85;
+        }
+        target[propName] = value;
+    }
+};
+const agent = new Proxy(richard, handler);
+agent.payRate = 1000; // set the actor's pay to $1,000
+console.log(agent.payRate); // $850 the actor's actual pay
 
 
