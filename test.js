@@ -429,3 +429,18 @@ new Promise((resolve) => {
 
 console.log(4)
 
+// const promise = new Promise((resolve, reject) => {
+//   console.log('Cythia')
+//   let result = false;
+//   if(result)
+//     resolve('Done')
+//   else
+//     reject('Fail')
+// })
+
+// .then((message) => console.log(message))
+// .catch((message) => console.log('ERROR! ' + message))
+// .finally(() => console.log('Operation closed'))
+
+// console.log('Theos')
+
