@@ -444,3 +444,24 @@
 
 // console.log('Theos')
 
+// Creating a promise
+const myPromise = new Promise((resolve, reject) => {
+  let success = true;
+
+  if (success) {
+    resolve("Task completed successfully!");
+  } else {
+    reject("Something went wrong...");
+  }
+});
+
+// Using a promise
+myPromise
+  .then(result => {
+    console.log(result); // runs if resolved
+  })
+  .catch(error => {
+    console.error(error); // runs if rejected
+  });
+
+
