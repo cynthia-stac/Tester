@@ -482,11 +482,27 @@
 // console.log('E');
 // // Order: A, B, E, C ok, D
 
-function orderPizza(){
-  orderPizza().then(pizza => console.log("Eating", pizza))
-  .catch(err => console.log("No food:", err))
-  .finally(() => console.log("Leaving the restaurant"));
+function orderPizza() {
+  return new Promise((resolve, reject) => {
+    console.log("You placed a pizza order...");
+    
+    setTimeout(() => {
+      const success = Math.random() > 0.3; // 70% chance success
+      if (success) {
+        resolve("🍕 Pizza is ready!");
+      } else {
+        reject("❌ Oven broke, no pizza...");
+      }
+    }, 2000); // takes 2 sec to "cook"
+  });
 }
+
+// Use the promise
+orderPizza()
+  .then(pizza => console.log("Customer:", pizza))
+  .catch(error => console.log("Customer:", error))
+  .finally(() => console.log("Customer: Leaving the restaurant"));
+
   
 
 
