@@ -422,12 +422,12 @@
 
 // console.log(Array)
 
-new Promise((resolve) => {
-  console.log(1)
-  resolve(2)
-}).then(result => console.log(result))
+// new Promise((resolve) => {
+//   console.log(1)
+//   resolve(2)
+// }).then(result => console.log(result))
 
-console.log(4)
+// console.log(4)
 
 // const promise = new Promise((resolve, reject) => {
 //   console.log('Cythia')
