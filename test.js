@@ -445,28 +445,43 @@
 // console.log('Theos')
 
 // Creating a promise
-const myPromise = new Promise((resolve, reject) => {
-  let success = true;
+// const myPromise = new Promise((resolve, reject) => {
+//   let success = true;
 
-  if (success) {
-    resolve("Task completed successfully!");
-  } else {
-    reject("Something went wrong...");
-  }
+//   if (success) {
+//     resolve("Task completed successfully!");
+//   } else {
+//     reject("Something went wrong...");
+//   }
+// });
+
+// // Using a promise
+// myPromise
+//   .then(result => {
+//     console.log(result);
+//     return "Next step!";
+//   })
+//   .then(step => {
+//     console.log(step);
+//   })
+//   .catch(error => {
+//     console.error(error);
+//   });
+
+console.log('A');
+
+const p = new Promise((res) => {
+  console.log('B');     // executor runs now
+  res('ok');            // settle now, but handlers queue
 });
 
-// Using a promise
-myPromise
-  .then(result => {
-    console.log(result);
-    return "Next step!";
-  })
-  .then(step => {
-    console.log(step);
-  })
-  .catch(error => {
-    console.error(error);
-  });
+p.then(v => console.log('C', v));
+
+setTimeout(() => console.log('D'), 0);
+
+console.log('E');
+// Order: A, B, E, C ok, D
+
 
 
 
