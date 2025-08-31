@@ -458,10 +458,15 @@ const myPromise = new Promise((resolve, reject) => {
 // Using a promise
 myPromise
   .then(result => {
-    console.log(result); // runs if resolved
+    console.log(result);
+    return "Next step!";
+  })
+  .then(step => {
+    console.log(step);
   })
   .catch(error => {
-    console.error(error); // runs if rejected
+    console.error(error);
   });
+
 
 
