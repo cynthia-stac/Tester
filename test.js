@@ -482,11 +482,12 @@
 // console.log('E');
 // // Order: A, B, E, C ok, D
 
-orderPizza()
-  .then(pizza => console.log("Eating", pizza))
+function orderPizza(){
+  orderPizza().then(pizza => console.log("Eating", pizza))
   .catch(err => console.log("No food:", err))
   .finally(() => console.log("Leaving the restaurant"));
-
+}
+  
 
 
 
