@@ -468,19 +468,24 @@
 //     console.error(error);
 //   });
 
-console.log('A');
+// console.log('A');
 
-const p = new Promise((res) => {
-  console.log('B');     // executor runs now
-  res('ok');            // settle now, but handlers queue
-});
+// const p = new Promise((res) => {
+//   console.log('B');     // executor runs now
+//   res('ok');            // settle now, but handlers queue
+// });
 
-p.then(v => console.log('C', v));
+// p.then(v => console.log('C', v));
 
-setTimeout(() => console.log('D'), 0);
+// setTimeout(() => console.log('D'), 0);
 
-console.log('E');
-// Order: A, B, E, C ok, D
+// console.log('E');
+// // Order: A, B, E, C ok, D
+
+orderPizza()
+  .then(pizza => console.log("Eating", pizza))
+  .catch(err => console.log("No food:", err))
+  .finally(() => console.log("Leaving the restaurant"));
 
 
 
