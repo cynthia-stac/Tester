@@ -487,7 +487,7 @@ function orderPizza() {
     console.log("You placed a pizza order...");
     
     setTimeout(() => {
-      const success = Math.random() > 0.3; // 70% chance success
+      const success = Math.random() > 0.3; // 30% chance success
       if (success) {
         resolve("🍕 Pizza is ready!");
       } else {
