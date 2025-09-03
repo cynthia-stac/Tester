@@ -503,7 +503,9 @@
 //   .catch(error => console.log("Customer:", error))
 //   .finally(() => console.log("Customer: Leaving the restaurant"));
 
-  
+//   Promises from udacity
+
+
 
 
 
