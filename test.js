@@ -505,13 +505,21 @@
 
 //   Promises from udacity
 
-new Promise(function(resolve) {
-  console.log('first');
-  resolve();
-  console.log('second');
-}).then(function() {
-  console.log('third');
-});
+// new Promise(function(resolve) {
+//   console.log('first');
+//   resolve();
+//   console.log('second');
+// }).then(function() {
+//   console.log('third');
+// });
+
+// main.js
+import describe, { circleArea, squareArea } from './shapes.js';
+
+console.log(describe("circle"));      // "This is a circle."
+console.log(circleArea(3));           // 28.27...
+console.log(squareArea(4));           // 16
+
 
 
 
