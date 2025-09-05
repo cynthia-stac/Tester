@@ -1,3 +1,3 @@
-import { display } from './lib.js'
+import { display } from './lib'
 
-display('Hi')
+display('Hello World!')
