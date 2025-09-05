@@ -1,61 +1,15 @@
-<!-- Create a Button to Randomly Change the Page Background Color
-
-- Instructions: Implement a button that, when clicked, changes the background color of the entire page to a randomly selected color. -->
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<link rel="stylesheet" href="./style.css"> 
-<button id ="main"> Click me!</button>
-<script src="./script.js"></script>
-<script src="./test.js"></script>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Promisify setTimeout</title>
-</head>
-<body>
-	<h1>Did the promise finish?</h1>
-	<div class="completion">Not yet</div>
-	<script>
-		function wait(ms) {
-			/*
-			Your code goes here!
 
-			Instructions:
-			(1) Wrap this setTimeout in a Promise. resolve() in setTimeout's callback.
-			(2) console.log(this) inside the Promise and observe the results.
-			(3) Make sure wait returns the Promise too!
-			 */
-            return new Promise(function(resolve){
-            console.log(this); 
-            window.setTimeout(function() {
-            resolve();
-                }, ms);
-              })      
-        };
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ES6 Modules</title>
+    </head>
 
-		/*
-		Uncomment these lines when you want to test!
-		You'll know you've done it right when the message on the page changes.
-		 */
-		var milliseconds = 2000;
-		 wait(milliseconds).then(finish);
+    <body>
 
+        <script src="js/index.js"></script>
+    </body>
 
-		// This is just here to help you test.
-		function finish() {
-			var completion = document.querySelector('.completion');
-			completion.textContent = "Your task was completed after " + milliseconds + "ms.";
-		};
-	</script>
-</body>
 </html>
