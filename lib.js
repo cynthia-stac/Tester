@@ -3,3 +3,6 @@ function display(message) {
   el.innerText = message;
   document.body.appendChild(el);
 }
+
+
+export { display}
