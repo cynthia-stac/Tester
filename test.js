@@ -514,7 +514,7 @@
 // });
 
 // main.js
-import describe, { circleArea, squareArea } from './shapes.js';
+import describe, { circleArea, squareArea } from './lib.js';
 
 console.log(describe("circle"));      // "This is a circle."
 console.log(circleArea(3));           // 28.27...
