@@ -520,18 +520,33 @@
 // console.log(circleArea(3));           // 28.27...
 // console.log(squareArea(4));           // 16
 
+// new Promise((resolve, reject) => {
+//   reject(2);  // start with 2
+// })
+// .catch(num => {
+//   console.log("Step 1:", num);
+//   return num * 2;  // pass 4
+// })
+// .catch(num => {
+//   console.log("Step 2:", num);
+//   return num + 3;  // pass 7
+// })
+// .catch(num => {
+//   console.log("Step 3:", num); // final result 7
+// });
+
 new Promise((resolve, reject) => {
-  reject(2);  // start with 2
+  resolve(2);  // start with 2
 })
-.catch(num => {
+.then(num => {
   console.log("Step 1:", num);
   return num * 2;  // pass 4
 })
-.catch(num => {
+.then(num => {
   console.log("Step 2:", num);
   return num + 3;  // pass 7
 })
-.catch(num => {
+.then(num => {
   console.log("Step 3:", num); // final result 7
 });
 
