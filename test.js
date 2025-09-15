@@ -573,23 +573,49 @@
 // console.log(aggregated); // Output: { A: 25, B: 45, C: 5 }
 
 
-function totalCategories() {
+// function totalCategories() {
 
-const data = [
-  { category: 'A', value: 10 },
-  { category: 'B', value: 20 },
-  { category: 'A', value: 15 },
-  { category: 'C', value: 5 },
-  { category: 'B', value: 25 },
-];
+// const data = [
+//   { category: 'A', value: 10 },
+//   { category: 'B', value: 20 },
+//   { category: 'A', value: 15 },
+//   { category: 'C', value: 5 },
+//   { category: 'B', value: 25 },
+// ];
 
-const totals = data.reduce((acc, { category, value }) => (
-  acc[category] = (acc[category] || 0) + value, acc
-), {});
+// const totals = data.reduce((acc, { category, value }) => (
+//   acc[category] = (acc[category] || 0) + value, acc
+// ), {});
 
-return totals
+// return Object.entries(totals)
 
 
-}
+// }
 
-console.log(totalCategories())
+// console.log(totalCategories())
+
+
+// function sumByCategory(){
+
+
+// const data = [
+//   { category: 'A', value: 10 },
+//   { category: 'B', value: 20 },
+//   { category: 'A', value: 15 },
+//   { category: 'C', value: 5 },
+//   { category: 'B', value: 25 },
+// ];
+
+
+// const obj = {}
+
+
+// for (const {category, value} of data){
+
+//   obj[category] = (obj[category] || 0) + value
+
+// }
+//   return obj
+
+// }
+// console.log(sumByCategory())
