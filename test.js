@@ -701,9 +701,9 @@
 // const result = flattenAndUnique(nestedArray);
 // console.log(result); // Output: [1, 2, 3, 4, 5]
 
-function flattenAndUnique(){
- const nestedArray = [1, [2, 3], 4, [2, [5, 1]], 3] 
- return nestedArray.flat(Infinity).sort((a, b) => a - b)
-}
+// function flattenAndUnique(){
+//  const nestedArray = [1, [2, 3], 4, [2, [5, 1]], 3] 
+//  return [...new Set(nestedArray.flat(Infinity))].sort((a, b) => a - b)
+// }
 
-console.log(flattenAndUnique())
+// console.log(flattenAndUnique())
