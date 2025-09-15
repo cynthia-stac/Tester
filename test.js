@@ -644,3 +644,29 @@
 //  return transform
 // }
 // console.log(transfromToObject())
+
+// function groupByAndCount(){
+
+//   const count = {}
+
+// const items = [
+//   { type: 'fruit' },
+//   { type: 'vegetable' },
+//   { type: 'fruit' },
+//   { type: 'fruit' },
+//   { type: 'vegetable' },
+//   { type: 'grain' },
+// ];
+
+// for (const {type} of items){
+
+//  count[type] = (count[type] || 0) + 1
+
+// }
+  
+//  return count
+
+// }
+
+
+// console.log(groupByAndCount())
