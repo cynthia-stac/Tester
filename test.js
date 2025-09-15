@@ -551,6 +551,9 @@
 // });
 
 
+const person = { name: "Cynthia", age: 21, country: "Rwanda" };
+
+console.log(Object.entries(person));
 
 
 
