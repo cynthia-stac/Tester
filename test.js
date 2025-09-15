@@ -619,3 +619,28 @@
 
 // }
 // console.log(sumByCategory())
+
+
+// Write a function that takes an array of objects, where each object has an id and a name property. The function should return a new object where the keys are the id values and the values are the corresponding name values.
+// const users = [
+//   { id: 1, name: 'Alice' },
+//   { id: 2, name: 'Bob' },
+//   { id: 3, name: 'Charlie' },
+// ];
+
+// const transformed = transformToObject(users);
+// console.log(transformed); // Output: { '1': 'Alice', '2': 'Bob', '3': 'Charlie' }
+
+// function transfromToObject(){
+//   const transform = {}
+//   const users = [
+//   { id: 1, name: 'Alice' },
+//   { id: 2, name: 'Bob' },
+//   { id: 3, name: 'Charlie' },
+// ];
+//  for (const {id, name} of users){
+//   transform[id] = name
+//  }
+//  return transform
+// }
+// console.log(transfromToObject())
