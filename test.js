@@ -535,20 +535,22 @@
 //   console.log("Step 3:", num); // final result 7
 // });
 
-new Promise((resolve, reject) => {
-  resolve(2);  // start with 2
-})
-.then(num => {
-  console.log("Step 1:", num);
-  return num * 2;  // pass 4
-})
-.then(num => {
-  console.log("Step 2:", num);
-  return num + 3;  // pass 7
-})
-.then(num => {
-  console.log("Step 3:", num); // final result 7
-});
+// new Promise((resolve, reject) => {
+//   resolve(2);  // start with 2
+// })
+// .then(num => {
+//   console.log("Step 1:", num);
+//   return num * 2;  // pass 4
+// })
+// .then(num => {
+//   console.log("Step 2:", num);
+//   return num + 3;  // pass 7
+// })
+// .then(num => {
+//   console.log("Step 3:", num); // final result 7
+// });
+
+
 
 
 
