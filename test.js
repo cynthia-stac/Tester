@@ -683,15 +683,16 @@
 // const adults = filterAndMap(people);
 // console.log(adults); // Output: ['BOB', 'DAVID']
 
-function filterAndMap(){
+// function filterAndMap(){
   
-  const people = [
-  { name: 'Alice', age: 16 },
-  { name: 'Bob', age: 22 },
-  { name: 'Charlie', age: 17 },
-  { name: 'David', age: 25 },
-];
-   return people.filter((people) => people.age > 18).map((people) => people.name.toUpperCase())
-}
+//   const people = [
+//   { name: 'Alice', age: 16 },
+//   { name: 'Bob', age: 22 },
+//   { name: 'Charlie', age: 17 },
+//   { name: 'David', age: 25 },
+// ];
+//    return people.filter((people) => people.age > 18).map((people) => people.name.toUpperCase())
+// }
 
-console.log(filterAndMap())
+// console.log(filterAndMap())
+
