@@ -551,7 +551,7 @@
 // });
 
 
-const person = { name: "Cynthia", age: 21, country: "Rwanda", carrer: "Web development", hobby:'Poetry' };
+const person = { name: "Cynthia", age: 21, country: "Rwanda", career: "Web development", hobby:'Poetry' };
 
 console.log(Object.entries(person));
 
