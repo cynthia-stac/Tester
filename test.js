@@ -722,11 +722,11 @@
 // }
 // console.log(compare())
 
-const user = { id: 1, name: "Alice", age: 25, country: "Rwanda" };
+// const user = { id: 1, name: "Alice", age: 25, country: "Rwanda" };
 
-// Rest collects, Spread rebuilds
-const { id, ...restProps } = user;
-const clone = { ...restProps, id };
+// // Rest collects, Spread rebuilds
+// const { id, ...restProps } = user;
+// const clone = { ...restProps, id };
 
-console.log(restProps); 
-console.log(clone);     
+// console.log(restProps); 
+// console.log(clone);     
