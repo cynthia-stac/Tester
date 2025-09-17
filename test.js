@@ -743,3 +743,8 @@
 
 // const result = tag`My name is ${name} and I am ${age} years old.`;
 // console.log(result); 
+
+
+const set = new Set([1,2,3,5,8]);
+set.delete(2);
+console.log(set); // Set(2) {1, 3}
