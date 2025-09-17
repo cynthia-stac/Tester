@@ -752,5 +752,5 @@
 const map = new Map();
 map.set("a", 1);
 map.set({x: 1}, 2); // object as key
-console.log(map.get({x: 1})); // 1
+console.log(map);
 
