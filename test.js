@@ -754,5 +754,26 @@
 // map.set({x: 1}, 2); // object as key
 // console.log(map);
 
+ class Product{
+  constructor(name, price){
+    this.name = name
+    this.price = price
+  }
+    getDetails(){
+      return `${this.name} buys ${this.price}`
+    }
 
+    applyDiscount(discount, newAmount){
+      newAmount = this.price - (this.price * discount)
+      return newAmount
+    }
+
+  }
+
+  const p1 = new Product("Chocolate", 7500)
+  console.log(p1.getDetails())
+  console.log(p1.applyDiscount(0.15))
+
+
+ 
 
