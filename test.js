@@ -730,3 +730,16 @@
 
 // console.log(restProps); 
 // console.log(clone);     
+
+
+// function tag(strings, ...values) {
+//   console.log(strings); // array of literal strings
+//   console.log(values);  // array of interpolated values
+//   return "Processed string!";
+// }
+
+// const name = "Alice";
+// const age = 25;
+
+// const result = tag`My name is ${name} and I am ${age} years old.`;
+// console.log(result); 
