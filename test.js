@@ -746,5 +746,5 @@
 
 
 const set = new Set([1,2,3,5,8]);
-set.delete(9);
-console.log(set); // Set(2) {1, 3}
+
+console.log(set.delete(9)); // Set(2) {1, 3}
