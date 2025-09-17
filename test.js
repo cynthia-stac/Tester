@@ -748,3 +748,9 @@
 // const set = new Set([1,2,3,5,8]);
 
 // console.log(set.delete(9)); // Set(2) {1, 3}
+
+const map = new Map();
+map.set("a", 1);
+map.set({x: 1}, 2); // object as key
+console.log(map.get({x: 1})); // 1
+
