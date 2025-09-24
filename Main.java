@@ -4,6 +4,6 @@ public class Main {
     System.out.println("Have a good day! ");
     System.out.print("Learning Java is fun!");
     System.out.println("Try it out!");
-
+    System.out.println((int)(Math.random() * 100));  
   }
 }
