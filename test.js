@@ -798,5 +798,18 @@ setTimeout(() => {
 
 console.log("End");
 
+let promise = new Promise((resolve, reject) => {
+  let success = true; // you can change this to false to test
+
+  if (success) {
+    resolve("The operation was successful!");
+  } else {
+    reject("Something went wrong.");
+  }
+});
+
+console.log(promise);
+
+
  
 
