@@ -794,7 +794,7 @@ console.log("Start");
 
 setTimeout(() => {
   console.log("Waiting is over!");
-}, 3000); // 3 seconds
+}, 2000); // 3 seconds
 
 console.log("End");
 
@@ -809,6 +809,21 @@ let promise = new Promise((resolve, reject) => {
 });
 
 console.log(promise);
+
+let wait = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve("2 seconds have passed!");
+  }, 3000);
+});
+
+console.log("Before promise");
+
+wait.then((message) => {
+  console.log(message);
+});
+
+console.log("After promise");
+
 
 
  
