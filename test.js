@@ -788,5 +788,15 @@
 // }
 // const iterator = fibonacciGenerator(10)
 // console.log(iterator.next())
+
+
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Waiting is over!");
+}, 3000); // 3 seconds
+
+console.log("End");
+
  
 
