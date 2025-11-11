@@ -774,19 +774,19 @@
 //   console.log(p1.getDetails())
 //   console.log(p1.applyDiscount(0.15))
 
-function* fibonacciGenerator(limit){
-let a = 0
-let b = 1
+// function* fibonacciGenerator(limit){
+// let a = 0
+// let b = 1
 
-let result = [a, b]
-  for (let i=0; i< limit - 2; i++){
-  result.push(a + b)
-  a = result[result.length - 2]
-  b = result[result.length - 1]
-  }
-  yield result
-}
-const iterator = fibonacciGenerator(10)
-console.log(iterator.next())
+// let result = [a, b]
+//   for (let i=0; i< limit - 2; i++){
+//   result.push(a + b)
+//   a = result[result.length - 2]
+//   b = result[result.length - 1]
+//   }
+//   yield result
+// }
+// const iterator = fibonacciGenerator(10)
+// console.log(iterator.next())
  
 
