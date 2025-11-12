@@ -790,39 +790,39 @@
 // console.log(iterator.next())
 
 
-console.log("Start");
+// console.log("Start");
 
-setTimeout(() => {
-  console.log("Waiting is over!");
-}, 2000); // 3 seconds
+// setTimeout(() => {
+//   console.log("Waiting is over!");
+// }, 2000); // 3 seconds
 
-console.log("End");
+// console.log("End");
 
-let promise = new Promise((resolve, reject) => {
-  let success = true; // you can change this to false to test
+// let promise = new Promise((resolve, reject) => {
+//   let success = true; // you can change this to false to test
 
-  if (success) {
-    resolve("The operation was successful!");
-  } else {
-    reject("Something went wrong.");
-  }
-});
+//   if (success) {
+//     resolve("The operation was successful!");
+//   } else {
+//     reject("Something went wrong.");
+//   }
+// });
 
-console.log(promise);
+// console.log(promise);
 
-let wait = new Promise((resolve) => {
-  setTimeout(() => {
-    resolve("2 seconds have passed!");
-  }, 3000);
-});
+// let wait = new Promise((resolve) => {
+//   setTimeout(() => {
+//     resolve("2 seconds have passed!");
+//   }, 3000);
+// });
 
-console.log("Before promise");
+// console.log("Before promise");
 
-wait.then((message) => {
-  console.log(message);
-});
+// wait.then((message) => {
+//   console.log(message);
+// });
 
-console.log("After promise");
+// console.log("After promise");
 
 
 
