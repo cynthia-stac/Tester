@@ -913,17 +913,17 @@ new Promise(function(resolve, reject) {
 
 }).then(function(result) { // (**)
 
-  alert(result); // 1
+  console.log(result); // 1
   return result * 2;
 
 }).then(function(result) { // (***)
 
-  alert(result); // 2
+  console.log(result); // 2
   return result * 2;
 
 }).then(function(result) {
 
-  alert(result); // 4
+  console.log(result); // 4
   return result * 2;
 
 });
