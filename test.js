@@ -856,12 +856,14 @@
 
 // let prom = new Promise((resolve, reject) => {
 //   let num = Math.random();
-//   if (num < .5 ){
+//   if (num < 0.5 ){
 //     resolve('Yay!');
 //   } else {
 //     reject('Ohhh noooo!');
 //   }
 // });
+
+
 
 // const handleSuccess = (resolvedValue) => {
 //   console.log(resolvedValue);
@@ -886,6 +888,46 @@
 //   console.log(`Cool, the script ${script.src} is loaded`);
 //   console.log( _ ); // _ is a function declared in the loaded script
 // };
+
+
+
+// let promise = new Promise(function(resolve, reject) {
+//   resolve("done");
+
+//   reject(new Error("…")); // ignored
+//   setTimeout(() => resolve("…")); // ignored
+// });
+// console.log(promise)
+
+// let promise = new Promise(function(resolve, reject) {
+//   resolve(1);
+
+//   setTimeout(() => console.log(2), 5000);
+// });
+
+// promise.then(res => console.log(res));
+
+new Promise(function(resolve, reject) {
+
+  setTimeout(() => resolve(1), 1000); // (*)
+
+}).then(function(result) { // (**)
+
+  alert(result); // 1
+  return result * 2;
+
+}).then(function(result) { // (***)
+
+  alert(result); // 2
+  return result * 2;
+
+}).then(function(result) {
+
+  alert(result); // 4
+  return result * 2;
+
+});
+  
 
 
 
