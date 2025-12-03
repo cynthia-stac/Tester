@@ -928,16 +928,19 @@
 
 // });
 
-fetch('/article/promise-chaining/user.json')
 
-  .then(function(response) {
-    
-    return response.text();
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then(response => {
+    return response.formData(); 
   })
-  .then(function(text) {
-   
-    console.log(text);
+  .then(data => {
+    console.log("Fetched data:");
+    console.log(data);
+  })
+  .catch(error => {
+    console.log("Something went wrong:", error);
   });
+
   
 
 
