@@ -928,7 +928,16 @@
 
 // });
 
+fetch('/article/promise-chaining/user.json')
 
+  .then(function(response) {
+    
+    return response.text();
+  })
+  .then(function(text) {
+   
+    console.log(text);
+  });
   
 
 
