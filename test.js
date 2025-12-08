@@ -929,17 +929,17 @@
 // });
 
 
-fetch("https://jsonplaceholder.typicode.com/posts/1")
-  .then(response => {
-    return response.formData(); 
-  })
-  .then(data => {
-    console.log("Fetched data:");
-    console.log(data);
-  })
-  .catch(error => {
-    console.log("Something went wrong:", error);
-  });
+// fetch("https://jsonplaceholder.typicode.com/posts/1")
+//   .then(response => {
+//     return response.formData(); 
+//   })
+//   .then(data => {
+//     console.log("Fetched data:");
+//     console.log(data);
+//   })
+//   .catch(error => {
+//     console.log("Something went wrong:", error);
+//   });
 
   
 
