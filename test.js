@@ -965,12 +965,12 @@
 //   .catch(error => console.log(error.message));
 
 
-new Promise((resolve, reject) => {
-  throw new Error("Whoops!");
-}).catch((err) => console.log(err)); // Error: Whoops!
+// new Promise((resolve, reject) => {
+//   throw new Error("Whoops!");
+// }).catch((err) => console.log(err)); // Error: Whoops!
 
-new Promise((resolve, reject) => {
-  reject(new Error("Whoops!"));
-}).catch((err) => console.log(err)); // Error: Whoops!
+// new Promise((resolve, reject) => {
+//   reject(new Error("Whoops!"));
+// }).catch((err) => console.log(err)); // Error: Whoops!
  
 
