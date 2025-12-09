@@ -981,13 +981,35 @@
 
 // console.log("This WILL run");
 
-try {
-  try {
-    throw new Error("Something bad happened");
-  } catch (err) {
-    console.log("Inner catch:", err.message);
-    throw err; // RETHROW the error
-  }
-} catch (err) {
-  console.log("Outer catch:", err.message);
-}
+// try {
+//   try {
+//     throw new Error("Something bad happened");
+//   } catch (err) {
+//     console.log("Inner catch:", err.message);
+//     // throw err; 
+//   }
+// } catch (err) {
+//   console.log("Outer catch:", err.message);
+// }
+
+
+// try {
+//   console.log("Start");
+//   throw new Error("Oops!");
+// } catch (err) {
+//   console.log("Caught:", err.message);
+// } finally {
+//   console.log("Cleaning up...");
+// }
+
+
+// the execution: catch -> then
+new Promise((resolve, reject) => {
+
+  throw new Error("Whoops!");
+
+}).catch(function(error) {
+
+  console.log("The error is handled, continue normally: " + error);
+
+}).then(() => console.log("Next successful handler runs"));
