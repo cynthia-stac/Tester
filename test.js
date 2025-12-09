@@ -973,4 +973,21 @@
 //   reject(new Error("Whoops!"));
 // }).catch((err) => console.log(err)); // Error: Whoops!
  
+// try {
+//   let x = JSON.parse("{bad json}");
+// } catch (err) {
+//   console.log("Caught the error:", err.message);
+// }
 
+// console.log("This WILL run");
+
+try {
+  try {
+    throw new Error("Something bad happened");
+  } catch (err) {
+    console.log("Inner catch:", err.message);
+    throw err; // RETHROW the error
+  }
+} catch (err) {
+  console.log("Outer catch:", err.message);
+}
