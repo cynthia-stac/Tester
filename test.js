@@ -1004,12 +1004,12 @@
 
 
 // the execution: catch -> then
-new Promise((resolve, reject) => {
+// new Promise((resolve, reject) => {
 
-  throw new Error("Whoops!");
+//   throw new Error("Whoops!");
 
-}).catch(function(error) {
+// }).catch(function(error) {
 
-  console.log("The error is handled, continue normally: " + error);
+//   console.log("The error is handled, continue normally: " + error);
 
-}).then(() => console.log("Next successful handler runs"));
+// }).then(() => console.log("Next successful handler runs"));
