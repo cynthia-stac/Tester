@@ -5,9 +5,9 @@ const menu = [
     { name: "Veggie", price: 9 },
 ]
 
-const cashInRegister = 100
-const nextOrderId = 1
-const orderQueue = []
+let cashInRegister = 100
+let nextOrderId = 1
+let orderQueue = []
 
 function addNewPizza(pizzaObj) {
     menu.push(pizzaObj)
@@ -26,3 +26,10 @@ function completeOrder(orderId) {
     order.status = "completed"
     return order
 }
+
+addNewPizza( {name: "Chicken Bacon Ranch", cost: 12})
+addNewPizza( {name: "BBQ Chicken", cost: 12})
+addNewPizza( {name: "Spicy Sausage", cost: 11})
+
+placeOrder("Chicken Bacon Ranch")
+completeOrder("1")
